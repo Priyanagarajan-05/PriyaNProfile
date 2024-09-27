@@ -1,0 +1,116 @@
+/* General Skills Section Styling */
+#skills {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa; /* Light mode background */
+}
+
+#skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: inline-flex;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    grid-gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    background-color: #fff; /* Light mode item background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.skill-content {
+    margin-top: 15px;
+}
+
+.skill-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skill-content p {
+    font-size: 1rem;
+    color: #666; /* Light mode text color */
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+    background-color: wheat;
+}
+
+/* Light Mode Text Color (Default Light Mode) */
+body.light-mode #skills h2,
+body.light-mode .skill-content h3,
+body.light-mode .skill-content p {
+    color: #000; /* Set text to black in light mode */
+}
+
+body.light-mode #skills {
+    background-color: #f8f9fa; /* Light background */
+}
+
+body.light-mode .skill-item {
+    background-color: #fff; /* Light background for skill items */
+}
+
+/* Dark Mode Text Color */
+body.dark-mode #skills h2,
+body.dark-mode .skill-content h3,
+body.dark-mode .skill-content p {
+    color: #fff; /* Set text to white in dark mode */
+}
+
+body.dark-mode #skills {
+    background-color: #333; /* Dark background */
+}
+
+body.dark-mode .skill-item {
+    background-color: #444; /* Dark background for skill items */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark mode */
+}
+
+body.dark-mode .skill-content p {
+    color: #ccc; /* Slightly lighter text color in dark mode */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+

@@ -1,0 +1,99 @@
+/* Style for the education container */
+.education-container {
+    display: none;
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Style for each education item */
+.education-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image inside the column */
+.education-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Text overlay on the image */
+.education-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content:baseline;
+    font-size: 20px;
+    width:90px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Content that is hidden initially */
+.education-item .education-content {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    opacity: 0;
+    padding: 20px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+/* Hover effect */
+.education-item:hover img {
+    transform: scale(1.1);
+}
+
+.education-item:hover .overlay {
+    opacity: 0;
+}
+
+.education-item:hover .education-content {
+    opacity: 1;
+}
+
+
+/* Dark mode styles */
+.dark-mode .education-container {
+    background-color: 0 4px 8px rgba(255, 255, 255, 0.1); /* Dark background for container */
+}
+
+.dark-mode .education-item {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark mode */
+    background-color: #1e1e1e; /* Dark background for each item */
+}
+
+.dark-mode .education-item .overlay {
+    background:rgba(255, 255, 255, 0.5);  /*Lighter overlay in dark mode */
+    color:black; /* White text on overlay */
+}
+
+.dark-mode .education-item .education-content {
+    background-color:white; /* Dark background for content */
+    color: black; /* White text for content */
+    border: 1px solid #333; /* Optional border for contrast */
+}

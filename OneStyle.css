@@ -1,0 +1,217 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    transition: background-color 0.5s ease;
+    line-height: 1.6;
+}
+
+.skills-container, .hobbies-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill-item, .hobby-item {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+
+
+
+/* family 
+
+.family-container img{
+    width: 200px;
+    height: 200px;
+    border-radius: 90%;
+    animation: fadeIn 5s ease forwards  ;
+
+}
+
+
+.column {
+    float:left;
+    width: 50%;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}*/
+/* Family Section Styles */
+#family {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.family-container {
+    display: flex;
+    justify-content: space-between; /* Space between the image and text */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between columns */
+}
+
+/* Columns */
+.row {
+    display: flex;
+    width: 100%; /* Make the row full width */
+}
+
+.column {
+    flex: 1; /* Allow columns to grow equally */
+    padding: 10px; /* Add some padding for spacing */
+}
+
+.image-column img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add border radius */
+}
+
+/* Text Column */
+.text-column {
+    text-align: left; /* Align text to the left */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .family-container {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .row {
+        flex-direction: column; /* Stack row items */
+    }
+
+    .text-column {
+        text-align: center; /* Center text on smaller screens */
+    }
+}
+
+
+/* contact 
+#contact {
+    padding: 50px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item {
+    font-size: 16px;
+}
+
+.contact-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}*/
+/* Contact Section */
+#contact {
+    padding: 50px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light mode background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item {
+    font-size: 16px;
+}
+
+.contact-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Light Mode (Default) */
+body.light-mode #contact h2,
+body.light-mode .contact-item strong,
+body.light-mode .contact-item p {
+    color: #000; /* Set text to black in light mode */
+}
+
+body.light-mode #contact {
+    background-color: #f9f9f9; /* Light mode background */
+}
+
+/* Dark Mode */
+body.dark-mode #contact h2,
+body.dark-mode .contact-item strong,
+body.dark-mode .contact-item p {
+    color: #fff; /* Set text to white in dark mode */
+}
+
+body.dark-mode #contact {
+    background-color: #333; /* Dark mode background */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Light shadow in dark mode */
+}
+
+body.dark-mode .contact-item a {
+    color: #4caf50; /* Greenish color for links in dark mode */
+}
+
+
+/* contact rsponsible */
+/* Responsive Styles */
+
+/* For tablets and larger devices (min-width: 768px) */
+@media (min-width: 768px) {
+    .contact-details {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+
+    .contact-item {
+        padding: 20px 30px;
+    }
+}
+
+/* For desktop and larger screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+    #contact h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-details {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+}

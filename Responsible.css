@@ -1,0 +1,197 @@
+/* header responsible */
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo-name {
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #switch-btn {
+        margin-top: 10px;
+    }
+}
+
+/* Media Query for Very Small Screens */
+@media (max-width: 480px) {
+    .profile-photo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .name {
+        font-size: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    #switch-btn {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+}
+
+
+/*  about responsible */
+/* Media Queries for Smaller Devices */
+@media (max-width: 768px) {
+    /* Display details section in one column on smaller screens */
+    #about-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Make font size and image smaller on mobile devices */
+    .about-column img {
+        max-width: 200px;
+    }
+
+    .about-detail-column img {
+        max-width: 120px;
+    }
+
+    .about-column p {
+        font-size: 0.9rem;
+    }
+}
+
+/* education reponsible */
+/* Media Queries for Responsiveness */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+    .education-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Phones and smaller tablets */
+@media (max-width: 768px) {
+    .education-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-item {
+        margin-bottom: 20px;
+    }
+
+    .education-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Extra small devices (like small mobile screens) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .education-content {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .education-item img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* family responsible webpage */
+/* Media Queries for Responsive Design */
+
+/* Medium screens like tablets */
+@media (max-width: 768px) {
+    .column img {
+        max-width: 80%;
+    }
+
+    .column h4 {
+        font-size: 1.4rem;
+    }
+
+    .column p, .family-container p {
+        font-size: 1rem;
+    }
+}
+
+/* Small screens like mobile devices */
+@media (max-width: 480px) {
+    .column img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .column h4 {
+        font-size: 1.2rem;
+    }
+
+    .column p, .family-container p {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* hobby */
+/* Responsive Styles */
+
+/* Tablet View */
+@media (max-width: 768px) {
+    .hobby-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+    
+    .hobby-details {
+        padding: 15px;
+    }
+
+    .hobby-image img {
+        max-width: 100%;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    .hobby-item {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+    
+    .hobby-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .hobby-image img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .hobby-details p {
+        font-size: 1rem;
+    }
+}

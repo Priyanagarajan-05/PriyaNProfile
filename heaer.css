@@ -1,0 +1,202 @@
+/* Header container */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-image: url('b2.png');
+    color: black;
+    width: 100%;
+}
+
+/* Profile photo and name container */
+.profile-photo-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Profile photo */
+.profile-photo img {
+    width: 150px;
+    height: 200px;
+    border-radius: 70%;
+    animation: fadeIn 5s ease forwards;
+}
+
+/* Name */
+.name {
+    margin-left: 15px;
+    font-size: 2.8rem;
+    opacity: 0;
+    font-family: 'Times New Roman', Times, serif;
+    animation: fadeIn 5s ease-in-out infinite;
+}
+
+/* Navigation styles */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+}
+
+#switch-btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: royalblue;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    border-color: tan;
+}
+
+#switch-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Section styling */
+section {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Name fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .education-item,
+    .skill-item,
+    .hobby-item {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-photo-name {
+        flex-direction: column;
+    }
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .header-container {
+    background-color: black; 
+}
+
+.dark-mode nav ul li a {
+    color: black;
+}
+
+.dark-mode #switch-btn {
+    background-color: white; 
+}
+
+.dark-mode section {
+    background-color: black; 
+    color: white; 
+}
+
+/* toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    position: absolute; 
+    top: 10px; 
+    right: 20px; 
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 95px; 
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 27px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 95%;
+}
+
+input:checked + .slider {
+    background-color:black;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); 
+}
+
+#theme-label {
+    margin-left: 10px; 
+    font-size: 16px;
+}

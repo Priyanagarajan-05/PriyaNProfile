@@ -1,0 +1,73 @@
+.about-column, .about-detail-column {
+    text-align: center;
+    margin: 10px; 
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-details {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    margin-top: 20px; /* Reduced top margin */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 10px; /* Reduced gap between columns */
+}
+
+.about-column img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px; /* Reduced space below image */
+}
+
+.about-column:hover {
+    background-color: wheat;
+    transform: scale(1.05);
+}
+
+/* Container layout */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px; 
+}
+
+/* Image styling for detail columns */
+.about-detail-column img {
+    width: 80%;
+    margin-bottom: 10px; 
+    max-width: 100%;
+    height: auto;
+    width: 150px; 
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* When the about-details are visible */
+.show-details .about-details {
+    opacity: 1;
+    max-height: 1090px; 
+}
+
+/* Flexbox layout for the about-details section */
+.about-details {
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Dark Mode Styles for About Section */
+.dark-mode .about-column, 
+.dark-mode .about-detail-column {
+    background-color:white; /* background for dark mode */
+    color: black; /* dark mode background text color */
+}
